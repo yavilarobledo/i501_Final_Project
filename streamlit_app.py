@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 
-# Load the dataset
+
 df = pd.read_csv('cleaned_sample.csv')
 
-# Title of the app
+
 st.title('Apartments for Rent Analysis')
 
-# Display the dataset
+
 st.write('## Dataset')
 st.write(df)
 
