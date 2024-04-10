@@ -10,4 +10,5 @@ load_dotenv()
 client=boto3.client('s3',endpoint_url=ENDPOINT_URL)
 
 response=client.list_buckets()
-pprint(response)
+for bucket in response['Buckets']:
+    print(bucket['Name'])
