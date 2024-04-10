@@ -5,4 +5,5 @@ data/
 
 .ipynb_checkpoints/
 __pycache__/
-environment.yml
+environment.ymlenvironment.yml
+.env
