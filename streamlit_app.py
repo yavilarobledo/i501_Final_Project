@@ -2,6 +2,8 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 from b2 import B2
+import pandas as pd
+
 
 
 
@@ -39,11 +41,6 @@ def get_data():
 
 
 @st.cache_resource
-
-
-
-import streamlit as st
-import pandas as pd
 
 
 # Sidebar title
