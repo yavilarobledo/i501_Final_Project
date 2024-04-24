@@ -11,6 +11,8 @@ processor = DataProcessor(df)
 
 st.title('Apartments for Rent Analysis')
 
+st.write('This project aims to analyze the ongoing apartment rent crisis by providing a Streamlit-based application that allows users to explore rental data with various filters. The primary focus is on affordability and desired amenities, offering a tool for stakeholders interested in the housing crisis and those seeking to understand the rental market dynamics. Through this app, users can gain insights into rental trends and identify factors contributing to the current crisis.')
+
 #filters
 st.sidebar.title('Filters')
 cityname_filter = st.sidebar.selectbox('Select City', processor.get_unique_cities())
