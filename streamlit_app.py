@@ -9,10 +9,34 @@ df = load_cached_data('cleaned_sample.csv')
 # Initialize DataProcessor
 processor = DataProcessor(df)
 
+
+st.title("Apartment Rent Crisis Analysis")
+st.markdown("""
+Welcome to the Apartment Rent Crisis Analysis App! This interactive tool helps you explore rental data from various cities,
+with a focus on affordability and desired amenities. The goal is to shed light on the current apartment rent crisis and provide
+insights for renters, housing advocates, policymakers, and researchers.
+
+## How to Use the App
+1. **Select Filters**: Use the sidebar to set your desired filters, such as city, pets allowed, price range, square footage, and amenities.
+2. **View Filtered Results**: Once you've selected your filters, the main section of the app will display a list of rental properties that match your criteria.
+3. **Analyze the Data**: You can explore the filtered data to gain insights into rental trends, find affordable options, or identify patterns in the rental market.
+
+## Filters
+- **City**: Choose a city to analyze.
+- **Pets Allowed**: Select if you want properties that allow Cats, Dogs, or None.
+- **Price Range**: Set the minimum and maximum price to match your budget.
+- **Square Footage**: Define the size of the property you're looking for.
+- **Amenities**: Choose desired amenities, such as parking, gym, pool, etc.
+
+Feel free to experiment with different combinations of filters to understand the rental market from different perspectives.
+If you have any questions, suggestions, or issues, contact [Your Contact Information].
+""")
+
+
 st.title('Apartments for Rent Analysis')
 
 st.write('This project aims to analyze the ongoing apartment rent crisis by providing a Streamlit-based application that allows users to explore rental data with various filters. The primary focus is on affordability and desired amenities, offering a tool for stakeholders interested in the housing crisis and those seeking to understand the rental market dynamics. Through this app, users can gain insights into rental trends and identify factors contributing to the current crisis.')
-
+st.write('This app allows users to input their affordable rent price as well as needed amenities')
 #filters
 st.sidebar.title('Filters')
 cityname_filter = st.sidebar.selectbox('Select City', processor.get_unique_cities())
