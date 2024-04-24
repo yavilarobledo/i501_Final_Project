@@ -10,7 +10,7 @@ def load_cached_data(file_path):
 
 def apply_filters(df, filters):
     """
-    Apply a set of filters to a DataFrame.
+    Applying a set of filters to a DataFrame.
 
     :param df: DataFrame to apply filters to.
     :param filters: Dictionary with filter parameters.

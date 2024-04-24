@@ -28,7 +28,7 @@ class DataProcessor:
             (self.df['square_feet'] <= max_square_feet)
         ]
 
-        # Conditional filtering based on 'pets_allowed'
+        # filtering based on 'pets_allowed'
         if pets != 'All':
             if pets == 'None':
                 # No pets allowed
@@ -37,7 +37,7 @@ class DataProcessor:
                 # Specific pet type (like 'cats' or 'dogs')
                 filtered_data = filtered_data[filtered_data['pets_allowed'].str.lower() == pets.lower()]
 
-        # If there are amenities specified, filter those as well
+        # If interested in specific amenities , filter by those as well
         if amenities:
             filtered_data = filtered_data[
                 filtered_data['amenities'].str.contains('|'.join(amenities), case=False, na=False)

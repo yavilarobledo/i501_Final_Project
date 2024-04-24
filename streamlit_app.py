@@ -9,15 +9,14 @@ df = load_cached_data('cleaned_sample.csv')
 # Initialize DataProcessor
 processor = DataProcessor(df)
 
-# App title
 st.title('Apartments for Rent Analysis')
 
-# Sidebar filters
+#filters
 st.sidebar.title('Filters')
 cityname_filter = st.sidebar.selectbox('Select City', processor.get_unique_cities())
 pets_filter = st.sidebar.selectbox('Pets Allowed?', ['All', 'Cats', 'Dogs', 'None'])
 
-# Square footage filters
+#square footage
 square_feet_min, square_feet_max = processor.get_square_feet_range()
 square_feet_min = st.sidebar.slider(
     'Minimum Square Footage', 
@@ -32,7 +31,7 @@ square_feet_max = st.sidebar.slider(
     square_feet_max
 )
 
-# Price filters
+# Price filter
 min_price, max_price = processor.get_price_range()
 min_price = st.sidebar.slider('Minimum Price', min_price, max_price, min_price)
 max_price = st.sidebar.slider('Maximum Price', min_price, max_price, max_price)
@@ -56,11 +55,11 @@ filtered_data = processor.filter_data(
 st.write('## Filtered Results')
 st.write(filtered_data)
 
-# Visualization: Price distribution
+# Visualization Requirement: Price distribution
 st.write('### Price Distribution')
 st.bar_chart(filtered_data['price'])
 
-# Visualization: Apartment locations map
+# Visualization Suggestion from TA: Apartment locations map
 locations = filtered_data[['latitude_deg', 'longitude_deg']]
 layer = pdk.Layer(
     'ScatterplotLayer',
