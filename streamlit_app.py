@@ -15,7 +15,7 @@ st.title('Apartments for Rent Analysis')
 # Sidebar filters
 st.sidebar.title('Filters')
 cityname_filter = st.sidebar.selectbox('Select City', processor.get_unique_cities())
-pets_filter = st.sidebar.selectbox('Pets Allowed?', ['All', 'Yes', 'No'])
+pets_filter = st.sidebar.selectbox('Pets Allowed?', ['All', 'Cats', 'Dogs', 'None'])
 
 # Square footage filters
 square_feet_min, square_feet_max = processor.get_square_feet_range()
@@ -66,7 +66,7 @@ layer = pdk.Layer(
     'ScatterplotLayer',
     data=locations,
     get_position=['longitude_deg', 'latitude_deg'],
-    get_radius=200,
+    get_radius=100,
     get_fill_color=[255, 0, 0],
     pickable=True,
 )

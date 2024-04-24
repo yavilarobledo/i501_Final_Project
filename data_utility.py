@@ -20,9 +20,16 @@ def apply_filters(df, filters):
     # Example filters
     if 'cityname' in filters:
         df = df[df['cityname'] == filters['cityname']]
-    if 'pets_allowed' in filters:
-        if filters['pets_allowed'] != 'All':
-            df = df[df['pets_allowed'] == filters['pets_allowed'].lower()]
+
+    if pets_filter == 'Cats':
+        filtered_df = df[df['pets'].isin(['cats', 'both'])]
+    elif pets_filter == 'Dogs':
+        filtered_df = df[df['pets'].isin(['dogs', 'both'])]
+    elif pets_filter == 'None':
+        filtered_df = df[df['pets'] == 'none']
+    else:
+        filtered_df = df  # 'All' selected, no filtering
+
     if 'price_range' in filters:
         min_price, max_price = filters['price_range']
         df = df[(df['price'] >= min_price) & (df['price'] <= max_price)]

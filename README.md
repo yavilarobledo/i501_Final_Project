@@ -30,10 +30,4 @@ The app is filtering data based on user-selected criteria, including city, pets 
 Considering the sensitive nature of personal and location-based data, the following ethical considerations are addressed:
 - **Privacy**: The data used does not contain personally identifiable information (PII) and respects user privacy.
 - **Fairness**: The app does not discriminate against any group or individual based on their demographics.
-- **Accuracy**: Care is taken to ensure the accuracy of the data to avoid misleading users.
 
-## Future Improvements
-Additional filters and visualization tools are planned for future versions of the web app. These may include:
-- Square footage filter to search by apartment size.
-- Amenities filter to search by specific features like gym, pool, or laundry.
-- Map-based visualization for better spatial understanding of apartment locations.
