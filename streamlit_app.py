@@ -4,10 +4,20 @@ from data_utility import load_cached_data
 from data_processor import DataProcessor
 
 # Load data with caching
-df = load_cached_data('cleaned_sample.csv')
+try:
+    df = load_cached_data('cleaned_sample.csv')
+except FileNotFoundError:
+    st.error("Data file not found. Please check the file path and try again.")
+except Exception as e:
+    st.error(f"An error occurred while loading data: {e}")
+    df = pd.DataFrame()  # Return an empty DataFrame if there's an error
 
 # Initialize DataProcessor
-processor = DataProcessor(df)
+try:
+    processor = DataProcessor(df)
+except Exception as e:
+    st.error(f"An error occurred while initializing data processing: {e}")
+
 
 
 st.title("Apartment Rent Crisis Analysis")
