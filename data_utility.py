@@ -29,7 +29,7 @@ def apply_filters(df, filters):
             df = df[df['pets_allowed'].isin(['dogs', 'both'])]
         elif pets_filter == 'None':
             df = df[df['pets_allowed'].isin(['no', 'none'])]
-        # If pets_filter is 'All', do nothing
+        # If pets_filter is 'All', it does nothing
 
     # Applying price range filter
     if 'price_range' in filters:
