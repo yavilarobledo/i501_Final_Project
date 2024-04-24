@@ -2,11 +2,21 @@ import pandas as pd
 import os
 import streamlit as st
 
+
+
 @st.cache
 def load_cached_data(file_path):
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(f"{file_path} not found")
-    return pd.read_csv(file_path)
+    try:
+        if not os.path.exists(file_path):
+            raise FileNotFoundError(f"{file_path} not found")
+        return pd.read_csv(file_path)
+    except FileNotFoundError:
+        raise
+    except pd.errors.ParserError:
+        raise RuntimeError("Error parsing the CSV file.")
+    except Exception as e:
+        raise RuntimeError(f"An error occurred while loading data: {e}")
+
 
 def apply_filters(df, filters):
     """

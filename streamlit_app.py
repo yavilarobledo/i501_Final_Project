@@ -72,11 +72,6 @@ filtered_data = processor.filter_data(
 )
 
 
-result_count = len(filtered_df)
-st.write(f"Number of results matching your filters: {result_count}")
-
-
-
 # Display filtered results
 st.write('## Filtered Results')
 st.write(filtered_data)
