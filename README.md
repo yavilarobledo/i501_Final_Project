@@ -1,14 +1,39 @@
 # i501_Final_Project
-## Abstract or Overview. 
-Briefly summarize the main purpose of your project, and what came out of it.
-Consider the stakeholder who would benefit from the tool you built. What would they find useful, and why?
-## Data Description. 
-Describe the data you extracted/cleaned. 
-In order to clean my data 
-## Algorithm Description. 
-Outline the algorithm(s) driving your web app.
-## Tools Used. 
-List all the tools you used for this project, describing the purpose(s) of each.
-## Ethical Concerns. 
-Identify any ethical or societal implications of your application, and explain how risks can be mitigated.
-For instance, you will likely need to consider the data you used (i.e., where it came from, what is was collected for), the user interface, possible model results (or inputs), etc.
+# Apartment Rental Analysis Web App
+
+## Abstract or Overview
+This web app analyzes apartment rental prices across various locations, allowing users to filter by city, pets allowed, and price range. The app serves as a tool for individuals seeking rental apartments and property managers to understand market trends. It helps users easily find apartments matching their preferences.
+
+## Audience
+The target audience for my streamlit project is for apartment hunters so they can benefit from the tool by easily searching for rentals that fit their needs. A plus is that property managers can use the tool to analyze market trends, identify popular amenities, and set competitive prices.
+
+## Data Description
+The dataset used in this project contains information on various apartments, including location, amenities, rental price, square footage, and other key features. The data was cleaned and processed to ensure accuracy and remove inconsistencies.
+
+### Data Fields
+- **Location**: City, State, Address, Latitude, Longitude
+- **Apartment Features**: Number of bedrooms, bathrooms, amenities
+- **Rental Price**: Price, currency, fee, pets allowed
+- **Other Details**: Time of data collection, source
+
+## Algorithm Description
+The app is filtering data based on user-selected criteria, including city, pets allowed, and price range. Additional features like filtering by square footage and amenities, as well as visualization tools, may be implemented for enhanced usability.
+
+## Tools Used
+- **Streamlit**: Used to create the web app, providing an easy way to build interactive user interfaces.
+- **Pandas**: For data manipulation and filtering operations.
+- **Folium** (or **pydeck**): Optional, for map-based visualizations.
+- **Python**: Primary programming language used for the backend logic.
+- **GitHub**: Version control system used to track changes and collaborate.
+
+## Ethical Concerns
+Considering the sensitive nature of personal and location-based data, the following ethical considerations are addressed:
+- **Privacy**: The data used does not contain personally identifiable information (PII) and respects user privacy.
+- **Fairness**: The app does not discriminate against any group or individual based on their demographics.
+- **Accuracy**: Care is taken to ensure the accuracy of the data to avoid misleading users.
+
+## Future Improvements
+Additional filters and visualization tools are planned for future versions of the web app. These may include:
+- Square footage filter to search by apartment size.
+- Amenities filter to search by specific features like gym, pool, or laundry.
+- Map-based visualization for better spatial understanding of apartment locations.
