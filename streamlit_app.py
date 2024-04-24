@@ -32,11 +32,6 @@ Feel free to experiment with different combinations of filters to understand the
 If you have any questions, suggestions, or issues, contact [Your Contact Information].
 """)
 
-
-st.title('Apartments for Rent Analysis')
-
-st.write('This project aims to analyze the ongoing apartment rent crisis by providing a Streamlit-based application that allows users to explore rental data with various filters. The primary focus is on affordability and desired amenities, offering a tool for stakeholders interested in the housing crisis and those seeking to understand the rental market dynamics. Through this app, users can gain insights into rental trends and identify factors contributing to the current crisis.')
-st.write('This app allows users to input their affordable rent price as well as needed amenities')
 #filters
 st.sidebar.title('Filters')
 cityname_filter = st.sidebar.selectbox('Select City', processor.get_unique_cities())
