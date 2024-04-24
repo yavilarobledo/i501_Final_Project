@@ -29,7 +29,6 @@ insights for renters, housing advocates, policymakers, and researchers.
 - **Amenities**: Choose desired amenities, such as parking, gym, pool, etc.
 
 Feel free to experiment with different combinations of filters to understand the rental market from different perspectives.
-If you have any questions, suggestions, or issues, contact [Your Contact Information].
 """)
 
 #filters
